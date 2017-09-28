@@ -39,13 +39,13 @@ var af_settings = {
   * By using the #include statement
   * Or by copy and pasting the contents of `trial_serializaton_generic_v3_mx.jsx`
   
-  **Using the #include is recommended** because you can link directly to the framework file on github and this way your licensing will always be the latest version.  When you export your script to a `.jsxbin` file, ESTK will import the include into the resulting file. 
+> **Using the #include is recommended** because you can link directly to the framework file on github and this way your licensing will always be the latest version.  When you export your script to a `.jsxbin` file, ESTK will import the include into the resulting file. 
   
 
 ```javascript
 #include "trial_serializaton_generic_v3_mx.jsx";
 ```
-  **IMPORTANT:** You should never distribute the `trial_serializaton_generic_v3_mx.jsx` separately!
+> **IMPORTANT:** You should never distribute the `trial_serializaton_generic_v3_mx.jsx` separately!
 
 3. **Create a new constructor for the framework:**
   * You must pass the settings object for your script defined above
@@ -94,32 +94,39 @@ ja_MyAwesomeTool(thisObj) {
 
 ### MANDATORY
 The Check function is mandatory
-### Check
+(#check)### Check
 This is the main check that you should use as the gateway to your script
+*Returns true or false*
 ```javascript
 af.c()
 ```
 
 ### RECOMMENDED
+**Table of Contents**
+
+  1. [Help UI](#helpUI)
+  1. [Is Trial](#isTrial)
+  1. [Silent License Check](#silentCheck)
+  
 These are the recommended and easiest functions to implement, unless you have a good reason not to use these you should use them and skip the whole "not recommended" section below
-### Help UI
-This will create a separate UI window where that has the necessary license tools as well as give you the option of adding some help text and buttons as defined in the settings object
-```javascript
-af.helpUI()
-```
-### Is Trial
-This will return whether the script is running in trial mode or not.  Use this to add some trial limitations to your script besides time
-```javascript
-af.t()
-```
-#### PLEASE ADD SOME TRIAL LIMITATIONS BESIDES TIME, NO SERIOUSLY PLEASE DO IT!
-Here's an example, but obviously, this will depend on the functions in your tool
+(#helpUI)### Help UI
+  This will create a separate UI window where that has the necessary license tools as well as give you the option of adding some help text and buttons as defined in the settings object
+  ```javascript
+ af.helpUI()
+ ```
+(#isTrial)### Is Trial
+  This will return whether the script is running in trial mode or not.  Use this to add some trial limitations to your script besides time
+  ```javascript
+ af.t()
+ ```
+  #### PLEASE ADD SOME TRIAL LIMITATIONS BESIDES TIME, NO SERIOUSLY PLEASE DO IT!
+  Here's an example, but obviously, this will depend on the functions in your tool
 
-```javascript
-var isTrial = af.t();
-var numLayers = app.project.activeItem.selectedLayers.length;
+  ```javascript
+ var isTrial = af.t();
+ var numLayers = app.project.activeItem.selectedLayers.length;
 
-if (isTrial && numLayers > 5) {
+ if (isTrial && numLayers > 5) {
 	alert("The trial version is limited to 5 layers\nOnly the first five layers will be processed");
 	numLayers = 5;
 	}
@@ -127,79 +134,87 @@ if (isTrial && numLayers > 5) {
 	for (var i = 0; i <= numLayers; i++) {
 		...
 		
-```
+ ```
 
-### Silent License Check
-This will check the license silently (won't prompt the user for a code if it's invalid)
+(#silentCheck)### Silent License Check
+  This will check the license silently (won't prompt the user for a code if it's invalid)
 
-```javascript
+  ```javascript
 af.s()
 ```
 
-#### PLEASE ADD SOME SILENT CHECKS IN RANDOM PLACES
-If the check fails then fall back to trial mode:
+  #### PLEASE ADD SOME SILENT CHECKS IN RANDOM PLACES
+  If the check fails then fall back to trial mode:
 
-```javascript
+  ```javascript
 isTrial = (!af.s());
 ```
 
 ### NOT RECOMMENDED
 *Not as easy to implement and not necessary if following RECOMMENDED section above as they are all already included in `af.helpUI()`*
 
-*IF YOU ARE NOT USING `af.helpUI();` YOU WILL NEED TO MAKE YOUR OWN HELP UI*
-Use the following functions to add the required license functionality to your UI
-*YOU MUST INCLUDE ALL OF THESE*
+> *IF YOU ARE NOT USING `af.helpUI();` YOU WILL NEED TO MAKE YOUR OWN HELP UI*
+> Use the following functions to add the required license functionality to your UI
+> *YOU MUST INCLUDE ALL OF THESE*
 
-### Get Registration
-This will return the registration (this also works in trial mode).
-```javascript
+**Table of Contents**
+
+  1. [Get Registration](#getRegistraion)
+  1. [Get Update Status Check](#getUpdateCheckStatus)
+  1. [Do Update Check](#doUpdateCheck)
+  1. [Remove License](#removeLicense)
+  1. [Open Support Ticket](#openSupportTicket)
+
+(#getRegistraion)### Get Registration
+  This will return the registration (this also works in trial mode).
+  ```javascript
 af.getRegistration()
 ```
 
-### Get Update Status Check
-Gets the Update Check status from the prefs
+(#getUpdateCheckStatus)### Get Update Status Check
+  Gets the Update Check status from the prefs
 
-```javascript
+  ```javascript
 af.getUpdateCheckStatus()
 ```
-Use this to set the state of the checkbox:  
-```javascript
+  Use this to set the state of the checkbox:  
+  ```javascript
 doUpdateCheckbox.value = af.getUpdateCheckStatus();
 ```
 
-### Do Update Check
-Turns automatic online update check on or off.
+  (#doUpdateCheck)### Do Update Check
+  Turns automatic online update check on or off.
 
-```javascript
+  ```javascript
 af.doUpdateCheck(false)
 ```
 
-Link this to a checkbox that allows the user to disable or enable the checks:
+  Link this to a checkbox that allows the user to disable or enable the checks:
 
-```javascript
-doUpdateCheckbox.onClick = function () { 
+  ```javascript
+  doUpdateCheckbox.onClick = function () { 
 		af.doUpdateCheck (this.value); 
 		}
 ```
 
-### Remove License
-This will remove the local license or deactivate a server license
+  (#removeLicense)### Remove License
+  This will remove the local license or deactivate a server license
 Link this to a button in the UI but preferably in a separate help or info UI
 
-```javascript
+  ```javascript
 af.r()
 ```
 
-### Open Support Ticket
+  (#openSupportTicket)### Open Support Ticket
 This will a support ticket for your product on aescripts.com. 
 
-```javascript
+  ```javascript
 af.openSupportTicket()
 ```
-You can optionally pass a settings object to define the subject or pass some diagnostic info.
+  You can optionally pass a settings object to define the subject or pass some diagnostic info.
 The script version, OS and AE versions are already being passed so you do not need to pass these. Only pass diagnostics that are specific to your script (besides the version).
 
-```javascript
+  ```javascript
 af.openSupportTicket({subject:"This is the ticket subject",diagnostic:"Diagnostic info specific to your script. Use \nfor new line"});
 ```
 
@@ -210,41 +225,51 @@ af.openSupportTicket({subject:"This is the ticket subject",diagnostic:"Diagnosti
 ## OPTIONAL HELPER FUNCTIONS
 This functions are here for you to use if you need them but you absolutely do not need to use them
 
-### Open URL
-This will open the specified url in the default browser
+**Table of Contents**
 
-```javascript
+  1. [Open URL](#openURL)
+  1. [External Settings](#externalSettings)
+    1. [Have Settings](#haveSetting)
+    1. [Get Settings](#getSetting)
+    1. [Save Settings](#saveSetting)
+    
+
+
+  (#openURL)### Open URL
+  This will open the specified url in the default browser
+
+  ```javascript
 af.openURL(url)
 ```
 
-## External Settings
-These functions can save and retrieve from an external JSON file in the `Folder.userData` folder. These can be useful if you would like to have your settings be independent of the AE preferences or if you are running into size limitations with the AE settings. It's also handy and easier as you can save arrays and objects directly.
+  (#externalSettings)## External Settings
+  These functions can save and retrieve from an external JSON file in the `Folder.userData` folder. These can be useful if you would like to have your settings be independent of the AE preferences or if you are running into size limitations with the AE settings. It's also handy and easier as you can save arrays and objects directly.
 
-**WARNING** You cannot save huge objects like an After Effects layer or comp. If you use these functions, you must test it thoroughly to make sure it can handle your data properly.
+  **WARNING** You cannot save huge objects like an After Effects layer or comp. If you use these functions, you must test it thoroughly to make sure it can handle your data properly.
 
-*Having said that, you should always try to use the built in AE settings functions `app.settings.getSetting()`, etc first and only use these if you have a good reason to*
+  *Having said that, you should always try to use the built in AE settings functions `app.settings.getSetting()`, etc first and only use these if you have a good reason to*
 
-### Have Setting
-Checks to see if the setting exists
+  (#haveSetting)### Have Setting
+   Checks to see if the setting exists
 
-```javascript
+   ```javascript
 af.haveSetting(Header, Name)
 ```
-### Get Setting
-Gets the setting
+  (#getSetting)### Get Setting
+   Gets the setting
 
-```javascript
+   ```javascript
 af.getSetting(Header, Name)
 ```
-### Save Setting
-Saves the setting
+  (#saveSetting)### Save Setting
+   Saves the setting
 
-```javascript
+   ```javascript
 af.saveSetting(Header, Name, Value)
 ```
 
-*Example:*
-```javascript
+   *Example:*
+   ```javascript
 	af.saveSetting("Color Settings", "My favorite color", "Orange");
    
 	var setting = ( af.haveSetting ("Color Settings", "My favorite color") ) //first check to make sure it exists
