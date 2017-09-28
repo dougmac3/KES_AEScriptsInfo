@@ -1,6 +1,7 @@
 # aescripts-JSX-licensing-framework
 Licensing framework for jsx scripts
 
+<a name="usage"></a>
 ## Usage Instructions
 
 1. **Set the variables for your script in the settings object:**
@@ -89,20 +90,20 @@ ja_MyAwesomeTool(thisObj) {
 
 
 
-
+<a name="functions"></a>
 ## Framework functions
 
+<a name="mandatory"></a>
 ### MANDATORY
 The Check function is mandatory
 (#check) ### Check
 This is the main check that you should use as the gateway to your script
-*Returns true or false*
+> *Returns true or false*
 ```javascript
 af.c()
 ```
-
+<a name="recommended"></a>
 ### RECOMMENDED
-**Table of Contents**
 
   1. [Help UI](#helpUI)
   1. [Is Trial](#isTrial)
@@ -113,12 +114,18 @@ These are the recommended and easiest functions to implement, unless you have a 
  <a name="helpUI"></a>
  ### Help UI
   This will create a separate UI window where that has the necessary license tools as well as give you the option of adding some help text and buttons as defined in the settings object
+  > *Returns the help UI*
   ```javascript
  af.helpUI()
  ```
+ 
+ [⬆ back to index](#recommended)
+ 
  <a name="isTrial"></a>
  ### Is Trial
   This will return whether the script is running in trial mode or not.  Use this to add some trial limitations to your script besides time
+    > *Returns true or false*
+    
   ```javascript
  af.t()
  ```
@@ -139,9 +146,12 @@ These are the recommended and easiest functions to implement, unless you have a 
 		
  ```
  
+[⬆ back to index](#recommended)
+ 
 <a name="silentCheck"></a>
 ### Silent License Check
   This will check the license silently (won't prompt the user for a code if it's invalid)
+> *Returns true or false*
 
   ```javascript
 af.s()
@@ -153,15 +163,15 @@ af.s()
   ```javascript
 isTrial = (!af.s());
 ```
-
+ [⬆ back to index](#recommended)
+ 
+  <a name="not-recommended"></a>
 ### NOT RECOMMENDED
 *Not as easy to implement and not necessary if following RECOMMENDED section above as they are all already included in `af.helpUI()`*
 
 > *IF YOU ARE NOT USING `af.helpUI();` YOU WILL NEED TO MAKE YOUR OWN HELP UI*
 > Use the following functions to add the required license functionality to your UI
 > *YOU MUST INCLUDE ALL OF THESE*
-
-**Table of Contents**
 
   1. [Get Registration](#getRegistration)
   1. [Get Update Status Check](#getUpdateCheckStatus)
@@ -172,13 +182,18 @@ isTrial = (!af.s());
 <a name="getRegistration"></a>
 ### Get Registration
   This will return the registration (this also works in trial mode).
+  > *Returns parsed registration info*
+  
   ```javascript
 af.getRegistration()
 ```
 
+ [⬆ back to index](#not-recommended)
+ 
 <a name="getUpdateCheckStatus"></a>
 ### Get Update Status Check
   Gets the Update Check status from the prefs
+  > *Returns true or false*
 
   ```javascript
 af.getUpdateCheckStatus()
@@ -188,9 +203,12 @@ af.getUpdateCheckStatus()
 doUpdateCheckbox.value = af.getUpdateCheckStatus();
 ```
 
+ [⬆ back to index](#not-recommended)
+ 
 <a name="doUpdateCheck"></a>
 ### Do Update Check
   Turns automatic online update check on or off.
+  > *No return*
 
   ```javascript
 af.doUpdateCheck(false)
@@ -204,17 +222,24 @@ af.doUpdateCheck(false)
 		}
 ```
 
+[⬆ back to index](#not-recommended)
+ 
 <a name="removeLicense"></a>
 ### Remove License
   This will remove the local license or deactivate a server license
 Link this to a button in the UI but preferably in a separate help or info UI
+> *No return*
 
   ```javascript
 af.r()
 ```
+ 
+ [⬆ back to index](#not-recommended)
+ 
 <a name="openSupportTicket"></a>
 ### Open Support Ticket
 This will a support ticket for your product on aescripts.com. 
+> *Opens a the default browser on the users computer and pre-populates the support ticket*
 
   ```javascript
 af.openSupportTicket()
@@ -226,14 +251,12 @@ The script version, OS and AE versions are already being passed so you do not ne
 af.openSupportTicket({subject:"This is the ticket subject",diagnostic:"Diagnostic info specific to your script. Use \nfor new line"});
 ```
 
+ [⬆ back to index](#not-recommended)
 
 
-
-
+<a name="helper-functions"></a>
 ## OPTIONAL HELPER FUNCTIONS
 This functions are here for you to use if you need them but you absolutely do not need to use them
-
-**Table of Contents**
 
   1. [Open URL](#openURL)
   1. [External Settings](#externalSettings)
@@ -245,10 +268,13 @@ This functions are here for you to use if you need them but you absolutely do no
 <a name="openURL"></a>
 ### Open URL
   This will open the specified url in the default browser
+> *Opens a the default browser on the users computer and directls to the url*
 
   ```javascript
 af.openURL(url)
 ```
+ [⬆ back to index](#helper-functions)
+ 
 <a name="externalSettings"></a>
 ## External Settings
   These functions can save and retrieve from an external JSON file in the `Folder.userData` folder. These can be useful if you would like to have your settings be independent of the AE preferences or if you are running into size limitations with the AE settings. It's also handy and easier as you can save arrays and objects directly.
@@ -260,22 +286,29 @@ af.openURL(url)
 <a name="haveSetting"></a>
 ### Have Setting
    Checks to see if the setting exists
+> *Return true or false*
 
    ```javascript
 af.haveSetting(Header, Name)
 ```
 
+ [⬆ back to index](#helper-functions)
+
 <a name="getSetting"></a>
 ### Get Setting
    Gets the setting
+> *Return the setting*
 
    ```javascript
 af.getSetting(Header, Name)
 ```
 
+ [⬆ back to index](#helper-functions)
+ 
 <a name="saveSetting"></a>
 ### Save Setting
    Saves the setting
+> *No return*
 
    ```javascript
 af.saveSetting(Header, Name, Value)
@@ -289,3 +322,5 @@ af.saveSetting(Header, Name, Value)
 			? af.getSetting ("Color Settings", "My favorite color")  //get it if it exists
 			: "My favorite color setting not found";  //fallback in case it doesn't exist
 ``` 
+
+ [⬆ back to index](#helper-functions)
