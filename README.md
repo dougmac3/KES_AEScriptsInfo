@@ -7,32 +7,32 @@ Licensing framework for jsx scripts
 
 ```javascript
 var af_settings = {
-	scriptName: "Test Product",  //This is the name of your product,  best thing to do is to use your global script name variable so they are always in sync
-	scriptVersion: "1.0",   //just the version number, do not add a v.  best thing to do is to use your global script version variable so they are always in sync
-	privateNum: 112233,   // **THIS IS YOUR SCRIPT'S UNIQUE PRIVATE NUMBER** please get this number from the aescripts admin, every product and major version will need a new number
-	SKU: "AESLT-SUL", // this is the products SKU on the site, ie AESLT-SUL
-	trialUrl: "http://aescripts.com/test-product/",  //enter the script URL here
-	authorName: "Joe Author", // your author name, this will be used in the copyright on the help UI
-	
-	// HELP UI VARIABLES ////////
-	helpText: "This is the help docs. Use \n for new lines", //You must include some brief instructions on how the tool works, THIS IS MANDATORY
-        
-		helpButtons: [   // THIS IS OPTIONAL //  You can include up to 3 buttons at the bottom of the help UI. They are defined in an array, if you are not using the helpUI function you do not need to include this variable
-                         //   {name: "Video Tutorial", url: "https://youtu.be/j7Q2bhWSmJk"}, // this object defines the 1st button
-                         //   {name: "Other Products", url: "http://aescripts.com/author/joe-author"}, // this would be the second button
-                            //only define the buttons you want, up to 3 
-                            ],
+    scriptName: "Test Product", //This is the name of your product,  best thing to do is to use your global script name variable so they are always in sync
+    scriptVersion: "1.0", //just the version number, do not add a v.  best thing to do is to use your global script version variable so they are always in sync
+    scriptAuthor: "Joe Author", // your author name, this will be used in the copyright on the help UI
+    scriptURL: "http://aescripts.com/test-product/", //enter the script URL here
+    privateNumber: 112233, // **THIS IS YOUR SCRIPT'S UNIQUE PRIVATE NUMBER** please get this number from the aescripts admin, every product and major version will need a new number
+    productSKU: "AESLT-SUL", // this is the products SKU on the site, ie AESLT-SUL
 
-	////// TRIAL EXPIRATION  VARIABLES///////
-	betaSupportEmail: "http://aescripts.com/contact", //IF YOU ARE RUNNING A BETA PLEASE PUT YOUR EMAIL HERE SO BETA TESTERS CAN CONTACT YOU IF THERE ARE ISSUES, replace with "http://aescripts.com/contact" for shipping version
-	offerTrial: true, //set to false if you don't want to offer a trial mode, true if you do 
-	trialLengthDays: 7,  // length of trial	
+    // HELP UI VARIABLES ////////
+    helpText: "This is the help docs. Use \n for new lines", //You must include some brief instructions on how the tool works, THIS IS MANDATORY
 
-	// BETA MODE SETTINGS
-	betaMode: false,  // set to true if you are distributing the script as a beta test, set the expiration date below
-	betaStartDate: new Date("Nov 1, 2017"), //Date the beta will start
-	betaExpirationDate: new Date("Dec 1, 2017"),  // Date the beta should expire in this format: "Dec 1, 2017"
-	}
+    helpButtons: [ // THIS IS OPTIONAL //  You can include up to 3 buttons at the bottom of the help UI. They are defined in an array, if you are not using the helpUI function you do not need to include this variable
+        //   {name: "Video Tutorial", url: "https://youtu.be/j7Q2bhWSmJk"}, // this object defines the 1st button
+        //   {name: "Other Products", url: "http://aescripts.com/author/joe-author"}, // this would be the second button
+        //only define the buttons you want, up to 3 
+    ],
+
+    ////// TRIAL EXPIRATION  VARIABLES///////
+    offerTrial: true, //set to false if you don't want to offer a trial mode, true if you do 
+    trialLengthDays: 7, // length of trial	
+
+    // BETA MODE SETTINGS
+    offerBeta: false, // set to true if you are distributing the script as a beta test, set the expiration date below
+    betaStartDate: new Date("Nov 1, 2017"), //Date the beta will start
+    betaExpirationDate: new Date("Dec 1, 2017"), // Date the beta should expire in this format: "Dec 1, 2017"
+    betaSupportEmail: "http://aescripts.com/contact", //IF YOU ARE RUNNING A BETA PLEASE PUT YOUR EMAIL HERE SO BETA TESTERS CAN CONTACT YOU IF THERE ARE ISSUES, replace with "http://aescripts.com/contact" for shipping version
+};
 ```
 
 2. **Include the framework:**
@@ -69,19 +69,22 @@ var af = new a(af_settings);  // instead of "af" use a random variable name like
 5. **Make sure your entire script is wrapped in a uniquely name function and create the framework object inside this main function:**
 ```javascript
 //always use a unique name for the main function as it will live in the global scope
-	ja_MyAwesomeTool (thisObj) {  
-	var af_settings = {
-		....
-	}
-	#include "trial_serializaton_generic_v3.jsx";
-	var g7 = new a(af_settings);   //remember to use a random variable name
-	if (g7.c()) {
-		myAwesomeToolMainFunction (thisObj) { //
-		...
-		}
-	}
- 
-	ja_MyAwesomeTool (this);  //pass 'this' so you can use it to build a dockable UI
+ja_MyAwesomeTool(thisObj) {
+        var af_settings = {
+            ....
+        }
+        
+        #include "trial_serializaton_generic_v3.jsx";
+        
+        var g7 = new a(af_settings); //remember to use a random variable name
+  
+        if (g7.c()) {
+            myAwesomeToolMainFunction(thisObj) { //
+                ...
+            }
+        }
+
+        ja_MyAwesomeTool(this); //pass 'this' so you can use it to build a dockable UI
 ```
 
 
@@ -193,7 +196,12 @@ This will a support ticket for your product on aescripts.com.
 ```javascript
 af.openSupportTicket()
 ```
+You can optionally pass a settings object to define the subject or pass some diagnostic info.
+The script version, OS and AE versions are already being passed so you do not need to pass these. Only pass diagnostics that are specific to your script (besides the version).
 
+```javascript
+af.openSupportTicket({subject:"This is the ticket subject",diagnostic:"Diagnostic info specific to your script. Use \nfor new line"});
+```
 
 
 
