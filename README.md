@@ -170,7 +170,7 @@ af.doUpdateCheck(false)
 Link this to a checkbox that allows the user to disable or enable the checks:
 
 ```javascript
-doUpdateCheckbox.onChange = function () { 
+doUpdateCheckbox.onClick = function () { 
 		af.doUpdateCheck (this.value); 
 		}
 ```
