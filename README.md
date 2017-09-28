@@ -38,10 +38,14 @@ var af_settings = {
 2. **Include the framework:**
   * By using the #include statement
   * Or by copy and pasting the contents of `trial_serializaton_generic_v3_mx.jsx`
+  
+  **Using the #include is recommended** because you can link directly to the framework file on github and this way your licensing will always be the latest version.  When you export your script to a `.jsxbin` file, ESTK will import the include into the resulting file. 
+  
 
 ```javascript
 #include "trial_serializaton_generic_v3_mx.jsx";
 ```
+  **IMPORTANT:** You should never distribute the `trial_serializaton_generic_v3_mx.jsx` separately!
 
 3. **Create a new constructor for the framework:**
   * You must pass the settings object for your script defined above
@@ -109,8 +113,8 @@ af.t()
 Here's an example, but obviously, this will depend on the functions in your tool
 
 ```javascript
-var isTrial = af.t()
-var numLayers = app.project.activeItem.selectedLayers;
+var isTrial = af.t();
+var numLayers = app.project.activeItem.selectedLayers.length;
 
 if (isTrial && numLayers > 5) {
 	alert("The trial version is limited to 5 layers\nOnly the first five layers will be processed");
@@ -206,9 +210,11 @@ af.openURL(url)
 ```
 
 ## External Settings
-These functions can save and retrieve from an external file. These can be useful if you would like to have your settings be independent of the AE settings or if you are running into size limitations with the AE settings.
+These functions can save and retrieve from an external JSON file in the `Folder.userData` folder. These can be useful if you would like to have your settings be independent of the AE preferences or if you are running into size limitations with the AE settings. It's also handy and easier as you can save arrays and objects directly.
 
-*You should always try to use the built in AE settings functions `app.settings.getSetting()`, etc first and only use these in case they don't work for whatever reason*
+**WARNING** You cannot save huge objects like an After Effects layer or comp. If you use these functions, you must test it thoroughly to make sure it can handle your data properly.
+
+*Having said that, you should always try to use the built in AE settings functions `app.settings.getSetting()`, etc first and only use these if you have a good reason to*
 
 ### Have Setting
 Checks to see if the setting exists
