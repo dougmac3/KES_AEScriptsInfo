@@ -94,7 +94,7 @@ ja_MyAwesomeTool(thisObj) {
 
 ### MANDATORY
 The Check function is mandatory
-(#check)### Check
+(#check) ### Check
 This is the main check that you should use as the gateway to your script
 *Returns true or false*
 ```javascript
@@ -109,12 +109,12 @@ af.c()
   1. [Silent License Check](#silentCheck)
   
 These are the recommended and easiest functions to implement, unless you have a good reason not to use these you should use them and skip the whole "not recommended" section below
-(#helpUI)### Help UI
+(#helpUI) ### Help UI
   This will create a separate UI window where that has the necessary license tools as well as give you the option of adding some help text and buttons as defined in the settings object
   ```javascript
  af.helpUI()
  ```
-(#isTrial)### Is Trial
+(#isTrial) ### Is Trial
   This will return whether the script is running in trial mode or not.  Use this to add some trial limitations to your script besides time
   ```javascript
  af.t()
@@ -136,7 +136,7 @@ These are the recommended and easiest functions to implement, unless you have a 
 		
  ```
 
-(#silentCheck)### Silent License Check
+(#silentCheck) ### Silent License Check
   This will check the license silently (won't prompt the user for a code if it's invalid)
 
   ```javascript
@@ -165,13 +165,13 @@ isTrial = (!af.s());
   1. [Remove License](#removeLicense)
   1. [Open Support Ticket](#openSupportTicket)
 
-(#getRegistraion)### Get Registration
+(#getRegistraion) ### Get Registration
   This will return the registration (this also works in trial mode).
   ```javascript
 af.getRegistration()
 ```
 
-(#getUpdateCheckStatus)### Get Update Status Check
+(#getUpdateCheckStatus) ### Get Update Status Check
   Gets the Update Check status from the prefs
 
   ```javascript
@@ -182,7 +182,7 @@ af.getUpdateCheckStatus()
 doUpdateCheckbox.value = af.getUpdateCheckStatus();
 ```
 
-  (#doUpdateCheck)### Do Update Check
+  (#doUpdateCheck) ### Do Update Check
   Turns automatic online update check on or off.
 
   ```javascript
@@ -197,7 +197,7 @@ af.doUpdateCheck(false)
 		}
 ```
 
-  (#removeLicense)### Remove License
+  (#removeLicense) ### Remove License
   This will remove the local license or deactivate a server license
 Link this to a button in the UI but preferably in a separate help or info UI
 
@@ -205,7 +205,7 @@ Link this to a button in the UI but preferably in a separate help or info UI
 af.r()
 ```
 
-  (#openSupportTicket)### Open Support Ticket
+  (#openSupportTicket) ### Open Support Ticket
 This will a support ticket for your product on aescripts.com. 
 
   ```javascript
@@ -235,33 +235,33 @@ This functions are here for you to use if you need them but you absolutely do no
     
 
 
-  (#openURL)### Open URL
+  (#openURL) ### Open URL
   This will open the specified url in the default browser
 
   ```javascript
 af.openURL(url)
 ```
 
-  (#externalSettings)## External Settings
+  (#externalSettings) ## External Settings
   These functions can save and retrieve from an external JSON file in the `Folder.userData` folder. These can be useful if you would like to have your settings be independent of the AE preferences or if you are running into size limitations with the AE settings. It's also handy and easier as you can save arrays and objects directly.
 
   **WARNING** You cannot save huge objects like an After Effects layer or comp. If you use these functions, you must test it thoroughly to make sure it can handle your data properly.
 
   *Having said that, you should always try to use the built in AE settings functions `app.settings.getSetting()`, etc first and only use these if you have a good reason to*
 
-  (#haveSetting)### Have Setting
+  (#haveSetting) ### Have Setting
    Checks to see if the setting exists
 
    ```javascript
 af.haveSetting(Header, Name)
 ```
-  (#getSetting)### Get Setting
+  (#getSetting) ### Get Setting
    Gets the setting
 
    ```javascript
 af.getSetting(Header, Name)
 ```
-  (#saveSetting)### Save Setting
+  (#saveSetting) ### Save Setting
    Saves the setting
 
    ```javascript
