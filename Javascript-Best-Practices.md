@@ -15,3 +15,5 @@
     if (obj.hasOwnProperty(prop))
     ```
     > more info about this here: [http://stackoverflow.com/questions/8312459/iterate-through-object-properties (http://stackoverflow.com/questions/8312459/iterate-through-object-properties )
+1. Lint your code. This is the one we recommend (but any js linter will do): 
+[JSHint](http://jshint.com/)
