@@ -4,6 +4,7 @@ Licensing framework for jsx scripts
 <a name="usage"></a>
 ## Usage Instructions
 
+1. **First and foremost, read the *Javascript Best Practices* to make sure you are playing nicely**
 1. **Set the variables for your script in the settings object:**
 
 ```javascript
@@ -67,7 +68,9 @@ var af = new a(af_settings);  // instead of "af" use a random variable name like
   }
 ```
 
-5. **Make sure your entire script is wrapped in a uniquely name function and create the framework object inside this main function:**
+5. **Make sure your entire script is wrapped in a uniquely name function and create the framework object inside this main function.**
+
+Here is an example of how your script should be structred:
 ```javascript
 //always use a unique name for the main function as it will live in the global scope
 ja_MyAwesomeTool(thisObj) {
