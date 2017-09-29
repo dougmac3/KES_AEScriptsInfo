@@ -289,7 +289,7 @@ af.openURL(url)
 <a name="haveSetting"></a>
 ### Have Setting
    Checks to see if the setting exists
-> *Return true or false*
+> *Returns true or false*
 
    ```javascript
 af.haveSetting(Header, Name)
@@ -300,7 +300,7 @@ af.haveSetting(Header, Name)
 <a name="getSetting"></a>
 ### Get Setting
    Gets the setting
-> *Return the setting*
+> *Returns the setting*
 
    ```javascript
 af.getSetting(Header, Name)
