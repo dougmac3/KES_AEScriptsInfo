@@ -8,7 +8,7 @@
     for (var i=0; i<length; i++) 
     ```
 1.	An un-initialized variable in a local function will become a global variable. So **always declare your variables**. 
-1.	Did we mention that you should declare/initialize all your variables? **Please declare your variables**. [http://speakingjs.com/es5/ch16.html ](http://speakingjs.com/es5/ch16.html )
+1.	Did we mention that you should declare/initialize all your variables? **Please declare your variables**. Please read this if you still don't believe us:  [http://speakingjs.com/es5/ch16.html ](http://speakingjs.com/es5/ch16.html )
 1.	Unless you really know what you are doing, *do not use prototypes or extend any native objects *
 1.	Never use `for (var i in obj)` to loop through arrays, only to loop through objects and always use:
     ```javascript
