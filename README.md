@@ -4,7 +4,7 @@ Licensing framework for jsx scripts
 <a name="usage"></a>
 ## Usage Instructions
 
-1. **First and foremost, read the *Javascript Best Practices* to make sure you are playing nicely**
+1. **First and foremost, read the [*Javascript Best Practices*](https://github.com/aescripts/aescripts-JSX-licensing-framework/blob/master/Javascript-Best-Practices.md) to make sure you are playing nicely**
 1. **Set the variables for your script in the settings object:**
 
 ```javascript
