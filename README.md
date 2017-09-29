@@ -259,7 +259,7 @@ af.openSupportTicket({subject:"This is the ticket subject",diagnostic:"Diagnosti
 
 <a name="helper-functions"></a>
 ## OPTIONAL HELPER FUNCTIONS
-This functions are here for you to use if you need them but you absolutely do not need to use them
+These functions are here for you to use if you need them but *they are completely optional*
 
   1. [Open URL](#openURL)
   1. [External Settings](#externalSettings)
@@ -282,7 +282,7 @@ af.openURL(url)
 ## External Settings
   These functions can save and retrieve from an external JSON file in the `Folder.userData` folder. These can be useful if you would like to have your settings be independent of the AE preferences or if you are running into size limitations with the AE settings. It's also handy and easier as you can save arrays and objects directly.
 
-  **WARNING** You cannot save huge objects like an After Effects layer or comp. If you use these functions, you must test it thoroughly to make sure it can handle your data properly.
+  **WARNING** You cannot save huge objects like an After Effects layer or comp (actually any native AE object will probably crash it). If you use these functions, you must test it thoroughly to make sure it can handle your data properly.
 
   *Having said that, you should always try to use the built in AE settings functions `app.settings.getSetting()`, etc first and only use these if you have a good reason to*
 
