@@ -5,7 +5,7 @@ Licensing framework for jsx scripts
 ## Usage Instructions
 
 1. **First and foremost, read the [*Javascript Best Practices*](https://github.com/aescripts/aescripts-JSX-licensing-framework/blob/master/Javascript-Best-Practices.md) to make sure you are playing nicely**
-2. Clone the framework from GitHub. Check out [*How to link to this framework*](https://github.com/aescripts/aescripts-JSX-licensing-framework/blob/master/How-to-Clone-the-Framework.md) if you are not familiar with GitHub
+2. Clone the framework from GitHub. Check out [*How to link to this framework*](https://github.com/aescripts/aescripts-JSX-licensing-framework/blob/master/How-to-Link-to-the-Framework.md) if you are not familiar with GitHub
 1. **Set the variables for your script in the settings object:**
 
 ```javascript
@@ -37,12 +37,12 @@ var af_settings = {
     betaSupportEmail: "http://aescripts.com/contact", //IF YOU ARE RUNNING A BETA PLEASE PUT YOUR EMAIL HERE SO BETA TESTERS CAN CONTACT YOU IF THERE ARE ISSUES, replace with "http://aescripts.com/contact" for shipping version
 };
 ```
-
+<a name="include"></a>
 2. **Include the framework:**
   * By using the #include statement
   * Or by copy and pasting the contents of `trial_serializaton_generic_v3_mx.jsx`
   
-> **Using the #include is recommended** because you can [link directly to the framework](https://github.com/aescripts/aescripts-JSX-licensing-framework/blob/master/How-to-Clone-the-Framework.md) file on github and this way your licensing will always be the latest version.  When you export your script to a `.jsxbin` file, ESTK will import the include into the resulting file. 
+> **Using the #include is recommended** because you can [link directly to the framework](https://github.com/aescripts/aescripts-JSX-licensing-framework/blob/master/How-to-Link-to-the-Framework.md) file on github and this way your licensing will always be the latest version.  When you export your script to a `.jsxbin` file, ESTK will import the include into the resulting file. 
   
 
 ```javascript
