@@ -13,6 +13,7 @@
 
 1. [This article](https://help.github.com/articles/cloning-a-repository/) explains how to clone a repo on the command line
 1. [This article](https://help.github.com/articles/syncing-a-fork/) explains how to sync to a branch, you always want to sync to the `master` branch
+1. Link to `trial_serializaton_generic_v3_mx.jsx` in the `src` folder directly using the `#include` statement as explained in the [README](https://github.com/aescripts/aescripts-JSX-licensing-framework/blob/master/README.md#include)
 1. Make sure to sync before you build a new version of your tool to make sure you have the latest version of the framework.
 
 ## Check out the release notes
