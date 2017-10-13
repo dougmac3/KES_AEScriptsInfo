@@ -262,6 +262,7 @@ af.openSupportTicket({subject:"This is the ticket subject",diagnostic:"Diagnosti
 ## OPTIONAL HELPER FUNCTIONS
 These functions are here for you to use if you need them but *they are completely optional*
 
+  1. [Framework Version](#frameworkVersion)
   1. [Open URL](#openURL)
   1. [External Settings](#externalSettings)
     1. [Have Settings](#haveSetting)
@@ -269,6 +270,16 @@ These functions are here for you to use if you need them but *they are completel
     1. [Save Settings](#saveSetting)
     
 
+<a name="frameworkVersion"></a>
+### Framework Version
+  This will return the version of the framework
+> *Use this internally to verify the version you are using, this is not inteded for external use*
+
+  ```javascript
+af.frameworkVersion()
+```
+ [⬆ back to index](#helper-functions)
+ 
 <a name="openURL"></a>
 ### Open URL
   This will open the specified url in the default browser
