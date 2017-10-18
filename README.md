@@ -78,7 +78,7 @@ ja_MyAwesomeTool(thisObj) {  //ja_would be your initials
             ....
         }
         
-        #include "trial_serializaton_generic_v3.jsx";
+        #include "trial_serializaton_generic_v3.jsx"
         
         var g7 = new a(af_settings); //remember to use a random variable name
   
