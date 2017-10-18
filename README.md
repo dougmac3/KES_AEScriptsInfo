@@ -26,9 +26,8 @@ var af_settings = {
         //only define the buttons you want, up to 3 
     ],
 
-    ////// TRIAL EXPIRATION  VARIABLES///////
-    offerTrial: true, //set to false if you don't want to offer a trial mode, true if you do 
-    trialLengthDays: 7, // length of trial	
+    ////// TRIAL ///////
+    offerTrial: true, //set to false if you don't want to offer a trial mode, true if you do
 
     // BETA MODE SETTINGS
     offerBeta: false, // set to true if you are distributing the script as a beta test, set the expiration date below
