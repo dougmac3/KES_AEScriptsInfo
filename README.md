@@ -45,7 +45,7 @@ var af_settings = {
   
 
 ```javascript
-#include "trial_serializaton_generic_v3_mx.jsx";
+#include "trial_serializaton_generic_v3_mx.jsx"
 ```
 > **IMPORTANT:** You should never distribute the `trial_serializaton_generic_v3_mx.jsx` separately!
 
