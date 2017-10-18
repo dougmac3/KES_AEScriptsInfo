@@ -6,7 +6,7 @@
 1. Login to your GitHub account on the Desktop client
 1. Click on the + on the top left to *Clone* this repository to somewhere on your machine 
 1. Link to `trial_serializaton_generic_v3_mx.jsx` in the `src` folder directly using the `#include` statement as explained in the [README](https://github.com/aescripts/aescripts-JSX-licensing-framework/blob/master/README.md#include)
-1. Click the `Sync` on the top right of the desktop client (`Fetch Origin` on Windows) to get the latest version from the server
+1. Click `Sync` (`Fetch Origin` on Windows) on the top right of the desktop client to get the latest version from the server
 1. This way you will always have the latest version of the framework :)
 
 ## Using the command line
