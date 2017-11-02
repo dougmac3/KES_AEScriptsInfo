@@ -90,7 +90,9 @@ ja_MyAwesomeTool(thisObj) {  //ja_would be your initials
 
         ja_MyAwesomeTool(this); //pass 'this' so you can use it to build a dockable UI
 ```
+6. **If you minify or uglify your code do it independently of the included framework and join it later**
 
+Since the framework is already uglified it's possible that uglyfying again will cause issues in the code so instead process your code first and then add the include before the final export to .jsxbin
 
 
 <a name="functions"></a>
