@@ -48,7 +48,7 @@ var af_settings = {
 #include "trial_serializaton_generic_v3_mx.jsx"
 ```
 > **IMPORTANT:** You should never distribute the `trial_serializaton_generic_v3_mx.jsx` separately!
-
+<a name="constructor"></a>
 3. **Create a new constructor for the framework:**
   * You must pass the settings object for your script defined above
   * Use a random variable name
@@ -59,7 +59,7 @@ var af_settings = {
 var af = new a(af_settings);  // instead of "af" use a random variable name like g7
 ```
 
-
+<a name="gatekeeper"></a>
 4. **Use the framework object as a gatekeeper to start your script:**
 
 ```javascript
@@ -67,7 +67,7 @@ var af = new a(af_settings);  // instead of "af" use a random variable name like
   // Run your script
   }
 ```
-
+<a name="unique_function"></a>
 5. **Make sure your entire script is wrapped in a uniquely name function and create the framework object inside this main function.**
 
 Here is an example of how your script should be structred:
@@ -90,6 +90,7 @@ ja_MyAwesomeTool(thisObj) {  //ja_would be your initials
 
         ja_MyAwesomeTool(this); //pass 'this' so you can use it to build a dockable UI
 ```
+<a name="minify"></a>
 6. **If you minify or uglify your code do it independently of the included framework and join it later**
 
 Since the framework is already uglified it's possible that uglyfying again will cause issues in the code so instead process your code first and then add the include before the final export to .jsxbin
