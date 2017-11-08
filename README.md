@@ -341,3 +341,43 @@ af.saveSetting(Header, Name, Value)
 ``` 
 
  [⬆ back to index](#helper-functions)
+ 
+ <a name="advanced"></a>
+## ADVANCED OPTIONS
+These are some advanced options - *they are completely optional*
+
+<a name="getSetting"></a>
+### Help UI button options
+   The buttons can be `Button` or `Checkbox`  
+
+The `helpButtons` array in the settings object defaults to a normal button that when clicked will send the user to the address defined in the `url` argument.  
+
+There are 3 other options that can be optionally defined:
+
+1. `type` Can be either `Button` or `Checkbox` 
+
+1. `btnValue` Used to define the boolean value of the checkbox. (Has no effect when type is `Button`)
+
+1. `onClickFunction` The function that will be executed when the button is clicked or the checkbox is checked
+
+
+
+#### Example: 
+
+```
+ helpButtons: [  
+         { 
+	 name: "Cutoff DropDown Menu Fix",  
+	 type: "Checkbox", 
+         onClickFunction: function () {
+                                     dropdownFix = this.value;
+                                     app.settings.saveSetting("aescripts", "dropdownFix", this.value);
+                                     alert("Please restart script to have the change take effect");
+                                      },
+         btnValue: dropdownFix }
+    ],
+```
+    
+
+
+ [⬆ back to index](#advanced)
