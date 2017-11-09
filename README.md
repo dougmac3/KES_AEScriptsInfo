@@ -234,7 +234,7 @@ af.doUpdateCheck(false)
 ### Remove / Deactivate License
   This will remove the local license or deactivate a server license
 Link this to a `Deactivate License` button in the UI but preferably in a separate help or info UI
-> *No return*
+> *Returns true if license removal was successful*
 
   ```javascript
 af.r()
@@ -244,9 +244,10 @@ af.r()
    ```javascript
    deactivateButton.visible = !af.t(); //only show button when licensed, ie. not in trial mode
    deactivateButton.onClick = function () {
-        af.r();
-        deactivateButton.visible = false;  //since we removed the license we can hide the button
-        }
+                   if (af.r()) {
+                   registration.text = af.getRegistration(); //update the registration since it has changed
+                   this.visible = false; //we can hide the button since we have removed the license
+                   }  
    ```
  
  [⬆ back to index](#not-recommended)
