@@ -182,7 +182,7 @@ isTrial = (!af.s());
   1. [Get Registration](#getRegistration)
   1. [Get Update Status Check](#getUpdateCheckStatus)
   1. [Do Update Check](#doUpdateCheck)
-  1. [Remove License](#removeLicense)
+  1. [Remove / Deactivate License](#removeLicense)
   1. [Open Support Ticket](#openSupportTicket)
 
 <a name="getRegistration"></a>
@@ -231,9 +231,9 @@ af.doUpdateCheck(false)
 [⬆ back to index](#not-recommended)
  
 <a name="removeLicense"></a>
-### Remove License
+### Remove / Deactivate License
   This will remove the local license or deactivate a server license
-Link this to a button in the UI but preferably in a separate help or info UI
+Link this to a `Deactivate License` button in the UI but preferably in a separate help or info UI
 > *No return*
 
   ```javascript
