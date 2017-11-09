@@ -239,6 +239,15 @@ Link this to a `Deactivate License` button in the UI but preferably in a separat
   ```javascript
 af.r()
 ```
+
+   *Example:*
+   ```javascript
+   deactivateButton.visible = !af.t(); //only show button when licensed, ie. not in trial mode
+   deactivateButton.onClick = function () {
+        af.r();
+        deactivateButton.visible = false;  //since we removed the license we can hide the button
+        }
+   ```
  
  [⬆ back to index](#not-recommended)
  
@@ -362,9 +371,8 @@ There are 3 other options that can be optionally defined:
 
 
 
-#### Example: 
-
-```
+   *Example:*
+   ```javascript
  helpButtons: [  
          { 
 	 name: "Cutoff DropDown Menu Fix",  
