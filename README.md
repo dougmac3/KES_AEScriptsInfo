@@ -350,7 +350,7 @@ These are some advanced options - *they are completely optional*
 ### Help UI button options
    The buttons can be `Button` or `Checkbox`  
 
-The `helpButtons` array in the settings object defaults to a normal button that when clicked will send the user to the address defined in the `url` argument.  
+The `helpButtons` array in the settings object defaults to a normal button that when clicked will send the user to the address defined in the `url` variable.  
 
 There are 3 other options that can be optionally defined:
 
