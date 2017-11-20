@@ -38,14 +38,15 @@ var af_settings = {
 ```
 <a name="include"></a>
 2. **Include the framework:**
-  * By using the #include statement
+  * By using the @include statement
   * Or by copy and pasting the contents of `trial_serializaton_generic_v3_mx.jsx`
   
-> **Using the #include is recommended** because you can [link directly to the framework](https://github.com/aescripts/aescripts-JSX-licensing-framework/blob/master/How-to-Link-to-the-Framework.md) file on github and this way your licensing will always be the latest version.  When you export your script to a `.jsxbin` file, ESTK will import the include into the resulting file. 
+> **Using the @include is recommended** because you can [link directly to the framework](https://github.com/aescripts/aescripts-JSX-licensing-framework/blob/master/How-to-Link-to-the-Framework.md) file on github and this way your licensing will always be the latest version.  When you export your script to a `.jsxbin` file, ESTK will import the include into the resulting file. 
+> In case you are curious, `@include` and `#include` are the same thing but `@include` passes a lint test while `#include` does not.
   
 
 ```javascript
-#include "trial_serializaton_generic_v3_mx.jsx"
+@include "trial_serializaton_generic_v3_mx.jsx"
 ```
 > **IMPORTANT:** You should never distribute the `trial_serializaton_generic_v3_mx.jsx` separately!
 <a name="constructor"></a>
@@ -73,12 +74,14 @@ var af = new a(af_settings);  // instead of "af" use a random variable name like
 Here is an example of how your script should be structred:
 ```javascript
 //always use a unique name for the main function as it will live in the global scope
-ja_MyAwesomeTool(thisObj) {  //ja_would be your initials
+ja_MyAwesomeTool(thisObj) 
+   {  //ja_would be your initials
+   
         var af_settings = {
             ....
         }
         
-        #include "trial_serializaton_generic_v3.jsx"
+        @include "trial_serializaton_generic_v3_mx.jsx"
         
         var g7 = new a(af_settings); //remember to use a random variable name
   
@@ -87,6 +90,8 @@ ja_MyAwesomeTool(thisObj) {  //ja_would be your initials
                 ...
             }
         }
+	
+   }
 
         ja_MyAwesomeTool(this); //pass 'this' so you can use it to build a dockable UI
 ```
