@@ -378,7 +378,7 @@ There are 3 other options that can be optionally defined:
 
 
    *Example:*
-   ```javascript
+```javascript
  helpButtons: [  
          { 
 	 name: "Cutoff DropDown Menu Fix",  
