@@ -161,7 +161,7 @@ These are the recommended and easiest functions to implement, unless you have a 
  
 <a name="silentCheck"></a>
 ### Silent License Check
-  This will check the license silently (won't prompt the user for a code if it's invalid)
+  This will check license silently (will not open UI if it is invalid) and will return true on valid license or valid trial. This is mainly intended to catch cases where the normal check has been removed or bypassed. There are various nefarious scripts floating around the dark web that do this. By adding these checks in random places you will protect your script against them.
 > *Returns true or false*
 
   ```javascript
