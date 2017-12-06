@@ -1,6 +1,6 @@
 #target estoolkit#dbg
 
-/**********************************************************************************************
+/***********************************************************************************************
     Encode text in ESTK.jsx
     By Alex White in 2017
     www.motion.land
@@ -15,7 +15,7 @@
         This script is provided "as is," without warranty of any kind, expressed
         or implied. In no event shall the author be held liable for any damages
         arising in any way from the use of this script.
-**********************************************************************************************/
+***********************************************************************************************/
 
 encodeSelectionPanel();
 
