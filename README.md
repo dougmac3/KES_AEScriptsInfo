@@ -95,8 +95,23 @@ ja_MyAwesomeTool(thisObj)
 
         ja_MyAwesomeTool(this); //pass 'this' so you can use it to build a dockable UI
 ```
+<a name="encode"></a>
+6. **Encode the Settings Object**
+
+Use `Encode text in ESTK.jsx` in the `Tools` folder to encode the settings object and any other part of your script that you would like to make harder for hackers to get to.  It super easy to use:
+
+1. Run the script in ExtendScript Toolkit (ESTK)
+1. Select the code you would like to encode
+1. Click on the `Encode Selection` button
+1. The code will be encoded and the source code will be commented out should you ever need to go back to it.  
+
+*When you export to .jsxbin all comments will be removed so you don't need to remove it before exporting*
+
+![How to encode a selection](http://share.aescripts.com/0u281O1e3E3j/Screen%20Recording%202017-12-06%20at%2003.03%20PM.gif)
+
+
 <a name="minify"></a>
-6. **If you minify or uglify your code do it independently of the included framework and join it later**
+7. **If you minify or uglify your code do it independently of the included framework and join it later**
 
 Since the framework is already uglified it's possible that uglyfying again will cause issues in the code so instead process your code first and then add the include before the final export to .jsxbin
 
