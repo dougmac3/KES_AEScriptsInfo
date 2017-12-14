@@ -38,10 +38,10 @@ var af_settings = {
 ```
 <a name="include"></a>
 2. **Include the framework:**
-  * By using the //@include statement
+  * By using the `//@include` statement
   * Or by copy and pasting the contents of `trial_serializaton_generic_v3_mx.jsx`
   
-> **Using the //@include is recommended** because you can [link directly to the framework](https://github.com/aescripts/aescripts-JSX-licensing-framework/blob/master/How-to-Link-to-the-Framework.md) file on github and this way your licensing will always be the latest version.  When you export your script to a `.jsxbin` file, ESTK will import the include into the resulting file. 
+> **Using the `//@include` is recommended** because you can [link directly to the framework](https://github.com/aescripts/aescripts-JSX-licensing-framework/blob/master/How-to-Link-to-the-Framework.md) file on github and this way your licensing will always be the latest version.  When you export your script to a `.jsxbin` file, ESTK will import the include into the resulting file. 
 > In case you are curious, `//@include` and `#include` are the same thing but `//@include` passes a [lint test](http://jshint.com/) while `#include` does not.
   
 
