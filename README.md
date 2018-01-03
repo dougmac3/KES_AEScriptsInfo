@@ -10,30 +10,32 @@ Licensing framework for jsx scripts
 
 ```javascript
 var af_settings = {
+    // THESE SETTINGS ARE MANDATORY
     scriptName: "Test Product", //This is the name of your product,  best thing to do is to use your global script name variable so they are always in sync
     scriptVersion: "1.0", //just the version number, do not add a v.  best thing to do is to use your global script version variable so they are always in sync
     scriptAuthor: "Joe Author", // your author name, this will be used in the copyright on the help UI
     scriptURL: "http://aescripts.com/test-product/", //enter the script URL here
     privateNumber: 112233, // **THIS IS YOUR SCRIPT'S UNIQUE PRIVATE NUMBER** please get this number from the aescripts admin, every product and major version will need a new number
     productSKU: "AESLT-SUL", // this is the products SKU on the site, ie AESLT-SUL
-
+  
     // HELP UI VARIABLES ////////
-    helpText: "This is the help docs. Use \n for new lines", //You must include some brief instructions on how the tool works, THIS IS MANDATORY
-
-    helpButtons: [ // THIS IS OPTIONAL //  You can include up to 3 buttons at the bottom of the help UI. They are defined in an array, if you are not using the helpUI function you do not need to include this variable
+    helpText: "This is the help docs. Use \n for new lines", //You must include some brief instructions on how the tool works, THIS IS MANDATORY. If you don't use the helpUI function, please include the intructions in your UI somewhere.
+    
+    // THESE SETTINGS ARE ALL OPTIONAL
+    helpButtons: [  //optional, You can include up to 3 buttons at the bottom of the help UI. They are defined in an array, if you are not using the helpUI function you do not need to include this variable
         //   {name: "Video Tutorial", url: "https://youtu.be/j7Q2bhWSmJk"}, // this object defines the 1st button
         //   {name: "Other Products", url: "http://aescripts.com/author/joe-author"}, // this would be the second button
         //only define the buttons you want, up to 3 
     ],
 
     ////// TRIAL ///////
-    offerTrial: true, //set to false if you don't want to offer a trial mode, true if you do
+    offerTrial: true, //optional, set to false if you don't want to offer a trial mode, true if you do, defaults to true
 
-    // BETA MODE SETTINGS
-    offerBeta: false, // set to true if you are distributing the script as a beta test, set the expiration date below
-    betaStartDate: new Date("Nov 1, 2017"), //Date the beta will start
-    betaExpirationDate: new Date("Dec 1, 2017"), // Date the beta should expire in this format: "Dec 1, 2017"
-    betaSupportEmail: "http://aescripts.com/contact", //IF YOU ARE RUNNING A BETA PLEASE PUT YOUR EMAIL HERE SO BETA TESTERS CAN CONTACT YOU IF THERE ARE ISSUES, replace with "http://aescripts.com/contact" for shipping version
+    // BETA MODE SETTINGS  
+    offerBeta: false, //optional, set to true if you are distributing the script as a beta test, set the expiration date below, defaults to false
+    betaStartDate: new Date("Nov 1, 2017"), //optional, Date the beta will start
+    betaExpirationDate: new Date("Dec 1, 2017"), //optional, Date the beta should expire in this format: "Dec 1, 2017"
+    betaSupportEmail: "http://aescripts.com/contact", //optional, IF YOU ARE RUNNING A BETA PLEASE PUT YOUR EMAIL HERE SO BETA TESTERS CAN CONTACT YOU IF THERE ARE ISSUES, replace with "http://aescripts.com/contact" for shipping version
 };
 ```
 <a name="include"></a>
