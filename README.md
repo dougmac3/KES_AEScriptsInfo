@@ -1,5 +1,5 @@
 # aescripts-JSX-licensing-framework
-Licensing framework for jsx scripts
+Licensing framework for jsx scripts. This framework is compatible with After Effects CS4 and up.
 
 
 <a name="usage"></a>
