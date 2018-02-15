@@ -1,11 +1,13 @@
 # aescripts-JSX-licensing-framework
 Licensing framework for jsx scripts
 
+
 <a name="usage"></a>
 ## Usage Instructions
 
 1. **First and foremost, read the [*Javascript Best Practices*](https://github.com/aescripts/aescripts-JSX-licensing-framework/blob/master/Javascript-Best-Practices.md) to make sure you are playing nicely**
-2. Clone the framework from GitHub. Check out [*How to link to this framework*](https://github.com/aescripts/aescripts-JSX-licensing-framework/blob/master/How-to-Link-to-the-Framework.md) if you are not familiar with GitHub
+1. Clone the framework from GitHub. Check out [*How to link to this framework*](https://github.com/aescripts/aescripts-JSX-licensing-framework/blob/master/How-to-Link-to-the-Framework.md) if you are not familiar with GitHub
+
 1. **Set the variables for your script in the settings object:**
 
 ```javascript
@@ -38,6 +40,7 @@ var af_settings = {
     betaSupportEmail: "http://aescripts.com/contact", //optional, IF YOU ARE RUNNING A BETA PLEASE PUT YOUR EMAIL HERE SO BETA TESTERS CAN CONTACT YOU IF THERE ARE ISSUES, replace with "http://aescripts.com/contact" for shipping version
 };
 ```
+
 <a name="include"></a>
 2. **Include the framework:**
   * By using the `//@include` statement
@@ -297,11 +300,14 @@ af.openSupportTicket({subject:"This is the ticket subject",diagnostic:"Diagnosti
 These functions are here for you to use if you need them but *they are completely optional*
 
   1. [Framework Version](#frameworkVersion)
-  1. [Open URL](#openURL)
-  1. [External Settings](#externalSettings)
-    1. [Have Settings](#haveSetting)
-    1. [Get Settings](#getSetting)
-    1. [Save Settings](#saveSetting)
+  2. [Open URL](#openURL)
+  3. [External Settings](#externalSettings):
+   * [Have Settings](#haveSetting)
+   * [Get Settings](#getSetting)
+   * [Save Settings](#saveSetting)
+  4. [JSON](#json):
+   * [readJSON](#readJSON)
+   * [writeJSON](#writeJSON)
     
 
 <a name="frameworkVersion"></a>
@@ -371,6 +377,43 @@ af.saveSetting(Header, Name, Value)
 			? af.getSetting ("Color Settings", "My favorite color")  //get it if it exists
 			: "My favorite color setting not found";  //fallback in case it doesn't exist
 ``` 
+
+ [⬆ back to index](#helper-functions)
+ 
+ ## JSON
+  These functions can read and write to and from an external JSON file. These can be useful if your script needs to read/write external JSON files. Please note that you should use the [External Settings](#externalSettings) functions if you are just interested in saving settings.
+
+  **WARNING** You cannot save huge objects like an After Effects layer or comp (actually any native AE object will probably crash it). But should work great for most use cases.
+
+<a name="readJSON"></a>
+### Read JSON
+   Reads and parses an external JSON file
+> *Returns parsed object*
+
+   ```javascript
+af.readJSON(file)
+```
+
+ [⬆ back to index](#helper-functions)
+
+<a name="writeJSON"></a>
+### Write JSON
+   Stringifies object and writes it to an external JSON file
+> *Returns true if write is successful*
+
+   ```javascript
+af.writeJSON(object,file)
+```
+
+ [⬆ back to index](#helper-functions)
+ 
+ *Example:*
+```javascript
+var json = af.readJSON( File.openDialog("Choose JSON file") );
+         
+af.writeJSON(json, File.saveDialog("Save JSON file","Javascript files:*.json") );
+         
+```
 
  [⬆ back to index](#helper-functions)
  
