@@ -79,7 +79,7 @@ var af = new a(af_settings);  // instead of "af" use a random variable name like
 Here is an example of how your script should be structred:
 ```javascript
 //always use a unique name for the main function as it will live in the global scope
-ja_MyAwesomeTool(thisObj) 
+function ja_MyAwesomeTool(thisObj) 
    {  //ja_would be your initials
    
         var af_settings = {
