@@ -197,7 +197,7 @@ isTrial = (!af.s());
  [⬆ back to index](#recommended)
  
   <a name="not-recommended"></a>
-### NOT RECOMMENDED
+### NOT RECOMMENDED BUT REQUIRED IF NOT USING `af.helpUI();`
 *Not as easy to implement and not necessary if following RECOMMENDED section above as they are all already included in `af.helpUI()`*
 
 > *IF YOU ARE NOT USING `af.helpUI();` YOU WILL NEED TO MAKE YOUR OWN HELP UI*
