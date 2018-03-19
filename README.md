@@ -165,11 +165,12 @@ These are the recommended and easiest functions to implement, unless you have a 
 
   ```javascript
  var isTrial = af.t();
+ var trialLayerLimit = 5;
  var numLayers = app.project.activeItem.selectedLayers.length;
 
- if (isTrial && numLayers > 5) {
-	alert("The trial version is limited to 5 layers\nOnly the first five layers will be processed");
-	numLayers = 5;
+ if (isTrial && numLayers > trialLayerLimit) {
+	alert("The trial version is limited to "+trialLayerLimit+" layers\nOnly the first five layers will be processed");
+	numLayers = trialLayerLimit;
 	}
 	
 	for (var i = 0; i <= numLayers; i++) {
