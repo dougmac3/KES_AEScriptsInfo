@@ -33,7 +33,7 @@ var af_settings = {
     ////// TRIAL ///////
     offerTrial: true, //optional, set to false if you don't want to offer a trial mode, true if you do, defaults to true
 
-    // BETA MODE SETTINGS  
+    // BETA MODE SETTINGS // You only need to include these if you are using the beta mode
     offerBeta: false, //optional, set to true if you are distributing the script as a beta test, set the expiration date below, defaults to false
     betaStartDate: new Date("Nov 1, 2017"), //optional, Date the beta will start
     betaExpirationDate: new Date("Dec 1, 2017"), //optional, Date the beta should expire in this format: "Dec 1, 2017"
