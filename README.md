@@ -26,7 +26,7 @@ var af_settings = {
     // THESE SETTINGS ARE ALL OPTIONAL
     helpButtons: [  //optional, You can include up to 3 buttons at the bottom of the help UI. They are defined in an array, if you are not using the helpUI function you do not need to include this variable
         //   {name: "Video Tutorial", url: "https://youtu.be/j7Q2bhWSmJk"}, // this object defines the 1st button
-        //   {name: "Other Products", url: "http://aescripts.com/author/joe-author"}, // this would be the second button
+        //   {name: "Other Products", url: "http://aescripts.com/authors/joe-author"}, // this would be the second button
         //only define the buttons you want, up to 3 
     ],
 
