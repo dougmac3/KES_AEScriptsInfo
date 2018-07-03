@@ -418,6 +418,33 @@ af.writeJSON(json, File.saveDialog("Save JSON file","Javascript files:*.json") )
 
  [⬆ back to index](#helper-functions)
  
+ ## JSONify
+ These functions differ from the JSON functions above in that they only parse and stringify to and from a JSON string and do not write anything to disk. These can be useful if you are accepting or sending a JSON file that is not a settings file (you would need to handle the reading/writing to disk part) or via memory, for example,  when [communicating with a KBar button](https://bitbucket.org/khanyu/kbar/wiki/Buttons/Scriptlet)
+
+ <a name="jsonify-parse"></a>
+### JSONify Parse
+   Parses a JSON string
+> *Returns object*
+
+   ```javascript
+af.JSONify(string,"parse")
+```
+
+ [⬆ back to index](#helper-functions)
+
+<a name="jsonify-stringify"></a>
+### JSONify Stringify
+   Stringifies object into JSON formatted string. Optional prettyJSON argument accepts a string to be used to format string
+> *Returns JSON formatted string*
+
+   ```javascript
+var prettyJSON = "\t";
+af.JSONify(object,"stringify",prettyJSON);
+```
+
+ [⬆ back to index](#helper-functions)
+ 
+ 
  <a name="advanced"></a>
 ## ADVANCED OPTIONS
 These are some advanced options - *they are completely optional*
