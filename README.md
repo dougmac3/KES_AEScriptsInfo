@@ -418,6 +418,9 @@ af.writeJSON(json, File.saveDialog("Save JSON file","Javascript files:*.json") )
 
  [⬆ back to index](#helper-functions)
  
+ ## JSONify
+ These functions differ from the JSON functions above in that they only parse and stringify to and from a JSON string and do not write anything to disk. These can be useful if you are accepting or sending a JSON string via memory, for example when [communicating with a KBar button](https://bitbucket.org/khanyu/kbar/wiki/Buttons/Scriptlet)
+
  <a name="jsonify-parse"></a>
 ### JSONify Parse
    Parses a JSON string
