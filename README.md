@@ -105,7 +105,8 @@ function ja_MyAwesomeTool(thisObj)
 
 Use `Encode text in ESTK.jsx` in the `Tools` folder to encode the settings object and any other part of your script that you would like to make harder for hackers to get to.  It super easy to use:
 
-1. Run `Encode text in ESTK.jsx` in ExtendScript Toolkit (ESTK) by double-clicking on the file. If you get an `You are about to run a script in estoolkit-4.0#dbg` alert, just click `Yes`
+1. Run `Encode text in ESTK.jsx` in ExtendScript Toolkit (ESTK) by double-clicking on the file. If you get an `You are about to run a script in estoolkit-4.0#dbg` alert, just click `No` and then run it by clicking the play button in ESTK
+![](http://share.aescripts.com/3o3S19231M01/Image%202018-07-03%20at%2012.09.40%20PM.png)
 1. Select the code you would like to encode
 1. Click on the `Encode Selection` button
 1. The code will be encoded and the source code will be commented out should you ever need to go back to it.  
