@@ -418,6 +418,30 @@ af.writeJSON(json, File.saveDialog("Save JSON file","Javascript files:*.json") )
 
  [⬆ back to index](#helper-functions)
  
+ <a name="jsonify-parse"></a>
+### JSONify Parse
+   Parses a JSON string
+> *Returns object*
+
+   ```javascript
+af.JSONify(string,"parse")
+```
+
+ [⬆ back to index](#helper-functions)
+
+<a name="jsonify-stringify"></a>
+### JSONify Stringify
+   Stringifies object into JSON formatted string. Optional prettyJSON argument accepts a string to be used to format string
+> *Returns JSON formatted string*
+
+   ```javascript
+var prettyJSON = "\t";
+af.JSONify(object,"stringify",prettyJSON);
+```
+
+ [⬆ back to index](#helper-functions)
+ 
+ 
  <a name="advanced"></a>
 ## ADVANCED OPTIONS
 These are some advanced options - *they are completely optional*
