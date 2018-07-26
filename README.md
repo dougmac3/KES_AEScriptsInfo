@@ -33,7 +33,7 @@ var af_settings = {
     ////// TRIAL ///////
     offerTrial: true, //optional, set to false if you don't want to offer a trial mode, true if you do, defaults to true
 
-    // BETA MODE SETTINGS // You only need to include these if you are using the beta mode
+    // BETA MODE SETTINGS // optional, you only need to include these if you are using the beta mode
     offerBeta: false, //optional, set to true if you are distributing the script as a beta test, set the expiration date below, defaults to false
     betaStartDate: new Date("Nov 1, 2017"), //optional, Date the beta will start
     betaExpirationDate: new Date("Dec 1, 2017"), //optional, Date the beta should expire in this format: "Dec 1, 2017"
@@ -111,7 +111,7 @@ Use `Encode text in ESTK.jsx` in the `Tools` folder to encode the settings objec
 1. Click on the `Encode Selection` button
 1. The code will be encoded and the source code will be commented out should you ever need to go back to it.  
 
-*When you export to .jsxbin all comments will be removed so you don't need to remove it before exporting*
+*Make sure to leave the commented settings so you can update it later if necessary. When you export to .jsxbin all comments will be removed so you don't need to remove it before exporting*
 
 ![How to encode a selection](http://share.aescripts.com/0u281O1e3E3j/Screen%20Recording%202017-12-06%20at%2003.03%20PM.gif)
 
@@ -127,8 +127,10 @@ Since the framework is already uglified it's possible that uglyfying again will 
 
 <a name="mandatory"></a>
 ### MANDATORY
+
+<a name="check"></a>
+### Check
 The Check function is mandatory
-(#check) ### Check
 This is the main check that you should use as the gateway to your script
 > *Returns true or false*
 ```javascript
