@@ -479,7 +479,7 @@ There are 3 other options that can be optionally defined:
                                      app.settings.saveSetting("aescripts", "dropdownFix", this.value);
                                      alert("Please restart script to have the change take effect");
                                       },
-         btnValue: dropdownFix }
+         btnValue: dropdownFix } //in this example dropdownFix is the variable from the onClick() function
     ],
 ```
     
