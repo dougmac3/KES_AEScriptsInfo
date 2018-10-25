@@ -58,7 +58,7 @@ var af_settings = {
 3. **Create a new constructor for the framework:**
   * You must pass the settings object for your script defined above
   * Use a random variable name
-  * You only need to do this once, once it is created you simply call if by its variable name
+  * You only need to do this once, once it is created you simply call it by its variable name
 
 
 ```javascript
