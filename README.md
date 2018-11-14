@@ -290,7 +290,7 @@ This will a support ticket for your product on aescripts.com.
 af.openSupportTicket()
 ```
   You can optionally pass a settings object to define the subject or pass some diagnostic info.
-The script version, OS and AE versions are already being passed so you do not need to pass these. Only pass diagnostics that are specific to your script (besides the version).
+**The script version, OS and AE versions are already being passed so you do not need to pass these.** Only pass diagnostics that are specific to your script (besides the version).
 
   ```javascript
 af.openSupportTicket({subject:"This is the ticket subject",diagnostic:"Diagnostic info specific to your script. Use \nfor new line"});
