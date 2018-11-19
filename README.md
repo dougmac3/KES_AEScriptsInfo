@@ -158,7 +158,7 @@ These are the recommended and easiest functions to implement, unless you have a 
  <a name="isTrial"></a>
  ### Is Trial
   This will return whether the script is running in trial mode or not.  Use this to add some trial limitations to your script besides time
-    > *Returns true or false*
+  > *Returns true or false*
     
   ```javascript
  af.t()
