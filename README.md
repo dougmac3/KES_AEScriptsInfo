@@ -58,7 +58,7 @@ var af_settings = {
 3. **Create a new constructor for the framework:**
   * You must pass the settings object for your script defined above
   * Use a random variable name
-  * You only need to do this once, once it is created you simply call if by its variable name
+  * You only need to do this once, once it is created you simply call it by its variable name
 
 
 ```javascript
@@ -158,7 +158,7 @@ These are the recommended and easiest functions to implement, unless you have a 
  <a name="isTrial"></a>
  ### Is Trial
   This will return whether the script is running in trial mode or not.  Use this to add some trial limitations to your script besides time
-    > *Returns true or false*
+  > *Returns true or false*
     
   ```javascript
  af.t()
@@ -290,7 +290,7 @@ This will a support ticket for your product on aescripts.com.
 af.openSupportTicket()
 ```
   You can optionally pass a settings object to define the subject or pass some diagnostic info.
-The script version, OS and AE versions are already being passed so you do not need to pass these. Only pass diagnostics that are specific to your script (besides the version).
+**The script version, OS and AE versions are already being passed so you do not need to pass these.** Only pass diagnostics that are specific to your script (besides the version).
 
   ```javascript
 af.openSupportTicket({subject:"This is the ticket subject",diagnostic:"Diagnostic info specific to your script. Use \nfor new line"});
@@ -479,7 +479,7 @@ There are 3 other options that can be optionally defined:
                                      app.settings.saveSetting("aescripts", "dropdownFix", this.value);
                                      alert("Please restart script to have the change take effect");
                                       },
-         btnValue: dropdownFix }
+         btnValue: dropdownFix } //in this example dropdownFix is the variable from the onClick() function
     ],
 ```
     
