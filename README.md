@@ -272,7 +272,7 @@ af.doUpdateCheckNow()
   Link this to a button that allows the user to perform an updated check.
 
   ```javascript
-  doUpdateCheckboxNow.onClick = function () { 
+  doUpdateCheckboxNowButton.onClick = function () { 
 		af.doUpdateCheckNow (); 
 		}
 ```
