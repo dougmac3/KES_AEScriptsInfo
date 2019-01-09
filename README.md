@@ -211,6 +211,7 @@ isTrial = (!af.s());
   1. [Get Registration](#getRegistration)
   1. [Get Update Status Check](#getUpdateCheckStatus)
   1. [Do Update Check](#doUpdateCheck)
+  1. [Do Update Check Now](#doUpdateCheckNow)
   1. [Remove / Deactivate License](#removeLicense)
   1. [Open Support Ticket](#openSupportTicket)
 
@@ -254,6 +255,25 @@ af.doUpdateCheck(false)
   ```javascript
   doUpdateCheckbox.onClick = function () { 
 		af.doUpdateCheck (this.value); 
+		}
+```
+
+[⬆ back to index](#not-recommended)
+
+<a name="doUpdateCheckNow"></a>
+### Do Update Check Now
+  Will perform an online update check. 
+  > *Will return an update alert that will either include information about an available update or indicate that it is the most current version*
+
+  ```javascript
+af.doUpdateCheckNow()
+```
+
+  Link this to a button that allows the user to perform an updated check.
+
+  ```javascript
+  doUpdateCheckboxNow.onClick = function () { 
+		af.doUpdateCheckNow (); 
 		}
 ```
 
