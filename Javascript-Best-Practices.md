@@ -16,4 +16,4 @@
     ```
     > more info about this here: [http://stackoverflow.com/questions/8312459/iterate-through-object-properties (http://stackoverflow.com/questions/8312459/iterate-through-object-properties )
 1. Lint your code. This is the one we recommend (but any js linter will do): 
-[JSHint](http://jshint.com/). Please note that the `#include` from the framework will fail in the linter because it is ESTK specific code, so just ignore that warning.
+[JSHint](http://jshint.com/). Please note that the `#include` from the framework will fail in the linter because it is ESTK specific code, so use `//@include` instead or just ignore that warning.
