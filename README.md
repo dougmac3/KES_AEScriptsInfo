@@ -103,6 +103,8 @@ function ja_MyAwesomeTool(thisObj)
 <a name="encode"></a>
 6. **Encode the Settings Object**
 
+#### If you are using `Visual Studio` you can skip this step (we are working on a VS plugin to do the same thing)
+
 Use `Encode text in ESTK.jsx` in the `Tools` folder to encode the settings object and any other part of your script that you would like to make harder for hackers to get to.  It super easy to use:
 
 1. Run `Encode text in ESTK.jsx` in ExtendScript Toolkit (ESTK) by double-clicking on the file. If you get an `You are about to run a script in estoolkit-4.0#dbg` alert, just click `No` and then run it by clicking the play button in ESTK
