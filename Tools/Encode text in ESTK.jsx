@@ -25,23 +25,24 @@ var encTxtPal = new Window("palette", "Encode the selection", undefined, {closeO
     encTxtPal.margins = encTxtPal.spacing = 0; encTxtPal.alignment = encTxtPal.alignChildren = ["fill", "fill"];
     
     encodeButton = encTxtPal.add("button", [0,0,120,55], "Encode Selection");
+    
     encodeButton.onClick = function () { encodeSelection(); } 
 
 
 function encodeSelection() {
 
     var textSelection = document.editor.textselection; 
-    if(textSelection === "") { alert("Please, select the text"); return false; }
+    if (textSelection === "") return !!alert("Please, select the text");
 
-    try{
+    try {
         var encoded = encodeFile(textSelection);
-    }catch(e){ alert("Something went wring during the encoding. Check your selection.\n" + e); return false; }
+    } catch(e) { return !!alert("Something went wring during the encoding. Check your selection.\n" + e); }
 
 
     var pasteText = textSelection.replace(/\n/g, ""); // we need this workaround because during the document.editor.insert() adds additional line breaks =\
-        pasteText = pasteText.replace(/^/gm,"//~$1");
+        pasteText = pasteText.replace(/^/gm,"//$1");
     
-   document.editor.cut();
+    document.editor.cut();
 
     var encodedText = "\n\neval(\"" + encoded+"\");\n\n"; // add linebreaks and eval
     document.editor.insert(encodedText); // inserting our text at the cursor position
@@ -68,4 +69,4 @@ encTxtPal.center();
 encTxtPal.show();
 
 
-}; //encodeSelectionPanel()
+};
