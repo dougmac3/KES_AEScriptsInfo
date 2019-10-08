@@ -187,7 +187,7 @@ These are the recommended and easiest functions to implement, unless you have a 
  
 <a name="silentCheck"></a>
 ### Silent License Check
-  This will check license silently (will not open UI if it is invalid) and will return true on valid license or valid trial. This is mainly intended to catch cases where the normal check has been removed or bypassed. There are various nefarious scripts floating around the dark web that do this. By adding these checks in random places you will protect your script against them.
+  This will check license silently (will not open UI if it is invalid) and will return true on valid license or valid trial. This is mainly intended to re-validate floating licenses with the floating license server as scripts cannot maintain a live connection with the server like plugins can. It can also be usedful to catch cases where the normal check has been removed or bypassed. There are various nefarious scripts floating around the dark web that do this. So please add these silent checks that will trigger in random functions of your tool.
 > *Returns true or false*
 
   ```javascript
