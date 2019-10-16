@@ -34,10 +34,10 @@ var af_settings = {
     offerTrial: true, //optional, set to false if you don't want to offer a trial mode, true if you do, defaults to true
 
     // BETA MODE SETTINGS // optional, you only need to include these if you are using the beta mode
-    offerBeta: false, //optional, set to true if you are distributing the script as a beta test, set the expiration date below, defaults to false
-    betaStartDate: new Date("Nov 1, 2017"), //optional, Date the beta will start
-    betaExpirationDate: new Date("Dec 1, 2017"), //optional, Date the beta should expire in this format: "Dec 1, 2017"
-    betaSupportEmail: "http://aescripts.com/contact", //optional, IF YOU ARE RUNNING A BETA PLEASE PUT YOUR EMAIL HERE SO BETA TESTERS CAN CONTACT YOU IF THERE ARE ISSUES, replace with "http://aescripts.com/contact" for shipping version
+    offerBeta: false, //set to true if you are distributing the script as a beta test, set the expiration date below, defaults to false
+    betaStartDate: new Date("Nov 1, 2017"), //Date the beta will start
+    betaExpirationDate: new Date("Dec 1, 2017"), //Date the beta should expire in this format: "Dec 1, 2017"
+    betaSupportEmail: "joedeveloper@me.com", //optional, so that beta testers can contact you directly
 };
 ```
 
