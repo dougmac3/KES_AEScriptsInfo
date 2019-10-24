@@ -103,20 +103,34 @@ function ja_MyAwesomeTool(thisObj)
 <a name="encode"></a>
 6. **Encode the Settings Object**
 
-#### If you are using `Visual Studio` you can skip this step (we are working on a VS plugin to do the same thing)
+#### If you are using `Visual Studio Code`:
+
+1. Get the TextToJSXBIN extension from the
+[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=motionland.texttojsxbin)
+1. Follow instructions provided there on how to install and use it.
+
+*Make sure to leave the commented settings so you can update it later if necessary. When you export to .jsxbin all comments will be removed so you don't need to remove it before exporting*
+
+<img src="https://github.com/axwt/texttojsxbin/raw/master/images/demo.gif" width="500">
+
+
+
+
+#### If you are using `ExtendScript Toolkit (ESTK)`: 
 
 Use `Encode text in ESTK.jsx` in the `Tools` folder to encode the settings object and any other part of your script that you would like to make harder for hackers to get to.  It super easy to use:
 
 1. Run `Encode text in ESTK.jsx` in ExtendScript Toolkit (ESTK) by double-clicking on the file. If you get an `You are about to run a script in estoolkit-4.0#dbg` alert, just click `No` and then run it by clicking the play button in ESTK
-![](http://share.aescripts.com/3o3S19231M01/a)
+
+<img src="https://share.aescripts.com/3o3S19231M01/a" width="500">
+
 1. Select the code you would like to encode
 1. Click on the `Encode Selection` button
 1. The code will be encoded and the source code will be commented out should you ever need to go back to it.  
 
 *Make sure to leave the commented settings so you can update it later if necessary. When you export to .jsxbin all comments will be removed so you don't need to remove it before exporting*
 
-![How to encode a selection](http://share.aescripts.com/0u281O1e3E3j/Screen%20Recording%202017-12-06%20at%2003.03%20PM.gif)
-
+<img src="https://share.aescripts.com/0u281O1e3E3j/a" width="500">
 
 <a name="minify"></a>
 7. **If you minify or uglify your code do it independently of the included framework and join it later**
