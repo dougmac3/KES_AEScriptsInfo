@@ -141,32 +141,40 @@ Since the framework is already uglified it's possible that uglyfying again will 
 <a name="mandatory"></a>
 ### MANDATORY
 
-<a name="check"></a>
+  1. [Check](#check)
+  1. [Help UI](#helpUI)
+  
+ <a name="check"></a>
 ### Check
 The Check function is mandatory
 This is the main check that you should use as the gateway to your script
 > *Returns true or false*
+
 ```javascript
 af.c()
 ```
+
+ [⬆ back to index](#mandatory)
+ 
+ <a name="helpUI"></a>
+ ### Help UI
+This will create a separate UI window where that has the necessary license tools as well as give you the option of adding some help text and buttons as defined in the settings object. As an alternative, you can build your own helpUI as explained in the [Not Recommended](#not-recommended) section below. Either way you **must include a help UI in your tool** with all the elements within it.
+  > *Returns the help UI*
+  
+  ```javascript
+ af.helpUI()
+ ```
+ 
+ [⬆ back to index](#mandatory)
+ 
 <a name="recommended"></a>
 ### RECOMMENDED
 
-  1. [Help UI](#helpUI)
   1. [Is Trial](#isTrial)
   1. [Silent License Check](#silentCheck)
   
 These are the recommended and easiest functions to implement, unless you have a good reason not to use these you should use them and skip the whole "not recommended" section below
 
- <a name="helpUI"></a>
- ### Help UI
-  This will create a separate UI window where that has the necessary license tools as well as give you the option of adding some help text and buttons as defined in the settings object
-  > *Returns the help UI*
-  ```javascript
- af.helpUI()
- ```
- 
- [⬆ back to index](#recommended)
  
  <a name="isTrial"></a>
  ### Is Trial
@@ -215,7 +223,7 @@ isTrial = (!af.s());
  
   <a name="not-recommended"></a>
 ### NOT RECOMMENDED BUT REQUIRED IF NOT USING `af.helpUI();`
-*Not as easy to implement and not necessary if following RECOMMENDED section above as they are all already included in `af.helpUI()`*
+*Not as easy to implement and not necessary if following MANDATORY section above as they are all already included in `af.helpUI()`*
 
 > *IF YOU ARE NOT USING `af.helpUI();` YOU WILL NEED TO MAKE YOUR OWN HELP UI*
 > Use the following functions to add the required license functionality to your UI
