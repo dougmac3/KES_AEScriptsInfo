@@ -1,2 +1,0 @@
-Note: After Effects does not currently support built-in dimension separation for the Scale property. Therefore when separating Scale dimensions, Keep ‘Em Separated creates individual X, Y, or Z Slider controls on the layer that are linked via expressions to the layer’s Scale property. Go into the Effects panel of the layer to see and edit these sliders. When you click the Join Dimensions button with 'Scale' selected these Slider controls will be removed from the layer, and all keyframes and their animation will be automatically applied to the layer's Scale property.
-
